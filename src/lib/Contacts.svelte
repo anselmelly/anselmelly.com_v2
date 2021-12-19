@@ -1,8 +1,9 @@
 <script>
-    export let s_name = "s_contacts";
+    export let s_name = "contacts";
+    import {scrollRef} from 'svelte-scrolling'
 </script>
 
-<section class="container mx-auto px-4 py-24 bg-white" id={s_name}>
+<section class="container mx-auto px-4 py-24 bg-white" id={s_name}  use:scrollRef={'contacts'}>
     <h2 class="text-6xl font-bold mb-12">
     Get in touch
 </h2>

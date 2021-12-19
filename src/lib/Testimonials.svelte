@@ -1,5 +1,6 @@
 <script>
-    export let s_name = "s_testimonials";
+    export let s_name = "testimonials";
+    import {scrollRef} from 'svelte-scrolling'
     let testimonials = [
         {
             name: "Huston Malande",
@@ -28,7 +29,7 @@
     ];
 </script>
 
-<section class="bg-gray-100 pt-10">
+<section class="p-4 m-24 mx-auto bg-white" id={s_name} use:scrollRef={s_name}>
     <div class="p-4 m-4 container mx-auto">
         <h2 class="text-6xl font-bold mb-12">Testimonials</h2>
         <div class="container mx-auto px-4">

@@ -1,5 +1,6 @@
 <script>
-    export let s_name = 's_services';
+    export let s_name = 'services';
+    import {scrollRef} from 'svelte-scrolling'
     let services = [
         {
             title:"Web Development",
@@ -33,7 +34,7 @@
         }
     ];
 </script>
-<section class="p-4 m-24 mx-auto bg-indigo-500" id={s_name}>
+<section class="p-4 m-24 mx-auto bg-indigo-500" id={s_name} use:scrollRef={s_name}>
     <div class=" container py-2 mx-auto m-24 p-8">
         <h2 class="text-6xl font-bold mb-12 text-white">Services...</h2>
         <p class="text-white text-xs uppercase">...what I endevor to offer the clients</p>

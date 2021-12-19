@@ -1,4 +1,5 @@
 <script>
+  import {scrollRef} from 'svelte-scrolling'
   let h = [
     {
       title: "Experience",
@@ -19,7 +20,7 @@
   ];
 </script>
 
-<section class="p-4 m-24 container mx-auto">
+<section class="p-4 m-24 container mx-auto" use:scrollRef={'about'} id='about'>
   <h2 class="text-6xl font-bold mb-12">About Me</h2>
   <div class="flex flex-col  lg:flex-row ">
     <div class=" align-bottom lg:w-1/3">

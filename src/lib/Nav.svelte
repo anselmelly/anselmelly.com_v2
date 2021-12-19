@@ -1,34 +1,43 @@
 <script>
+    import { scrollElement, setGlobalOptions } from "svelte-scrolling";
+
+    import { quadInOut } from "svelte/easing";
     import { fade } from "svelte/transition";
     import Logo from "./partials/Logo.svelte";
+    let options = {
+        duration: 800,
+        offset: -60,
+        easing: quadInOut,
+    };
+    let globalOptions = setGlobalOptions(options);
     let menus = [
         {
             name: "About",
-            id: "s_about",
+            id: "about",
+        },
+        {
+            name: "Stack",
+            id: "stack",
         },
         {
             name: "Services",
-            id: "s_services",
+            id: "services",
         },
         {
             name: "Clients",
-            id: "s_clients",
+            id: "clients",
         },
         {
             name: "Showcase",
-            id: "s_showcase",
-        },
-        {
-            name: "Experiences",
-            id: "s_experiences",
+            id: "showcase",
         },
         {
             name: "Testimonials",
-            id: "s_testimonials",
+            id: "testimonials",
         },
         {
             name: "Contacts",
-            id: "s_contacts",
+            id: "contacts",
         },
     ];
     $: y = 0;
@@ -81,12 +90,20 @@
             <div class="flex flex-col md:flex-row md:mx-6">
                 {#each menus as menu}
                     <a
-                        class="my-1 text-md text-right uppercase underline-offset-8 underline lg:no-underline font-bold 
-                        dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+                        on:click|preventDefault={(e) => {
+                            scrollElement(menu.id);
+                            isOpen = !isOpen;
+                        }}
+                        class="my-1 text-md text-right uppercase underline-offset-8 underline lg:no-underline font-bold
+                        dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0 inline-block h-6"
                         class:text-gray-300={y < minY}
                         class:text-gray-600={y > minY}
-                        href="#">{menu.name}</a
+                        href="#{menu.id}"
                     >
+                        <span class="inline-block">
+                            {menu.name}
+                        </span>
+                    </a>
                 {/each}
             </div>
         </div>
