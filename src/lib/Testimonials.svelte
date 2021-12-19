@@ -29,7 +29,7 @@
     ];
 </script>
 
-<section class="p-4 m-24 mx-auto bg-white" id={s_name} use:scrollRef={s_name}>
+<section class="p-4 m-24 mx-auto bg-gray-200" id={s_name} use:scrollRef={s_name}>
     <div class="p-4 m-4 container mx-auto">
         <h2 class="text-6xl font-bold mb-12">Testimonials</h2>
         <div class="container mx-auto px-4">

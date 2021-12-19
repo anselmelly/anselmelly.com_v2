@@ -23,13 +23,14 @@
             name: "Services",
             id: "services",
         },
-        {
-            name: "Clients",
-            id: "clients",
-        },
+        
         {
             name: "Showcase",
             id: "showcase",
+        },
+        {
+            name: "Clients",
+            id: "clients",
         },
         {
             name: "Testimonials",

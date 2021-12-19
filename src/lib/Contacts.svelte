@@ -1,18 +1,17 @@
 <script>
     export let s_name = "contacts";
-    import {scrollRef} from 'svelte-scrolling'
+    import { scrollRef } from "svelte-scrolling";
 </script>
 
-<section class="container mx-auto px-4 py-24 bg-white" id={s_name}  use:scrollRef={'contacts'}>
-    <h2 class="text-6xl font-bold mb-12">
-    Get in touch
-</h2>
+<section
+    class="container mx-auto px-4 py-24 bg-white"
+    id={s_name}
+    use:scrollRef={"contacts"}
+>
+    <h2 class="text-6xl font-bold mb-12">Get in touch</h2>
     <div class=" mx-auto lg:grid lg:grid-cols-5">
-        <div
-            class="py-16 px-4 lg:col-span-2"
-        >
-            <div class="max-w-full mx-auto">
-                
+        <div class="py-16 px-4 lg:col-span-2">
+            <div class=" mx-auto">
                 <p class="mt-3 text-xl leading-6 text-gray-500">
                     messages,ideas,comments,feedback
                 </p>
@@ -74,13 +73,12 @@
                         </dd>
                     </div>
                 </dl>
-              
             </div>
         </div>
         <div
-            class="bg-white py-8 px-4 sm:px-6 lg:col-span-3 lg:py-12 lg:px-8 xl:pl-10"
+            class="bg-white py-8 px-0 lg:col-span-3 lg:py-12 lg:px-8 xl:pl-10"
         >
-            <div class="max-w-md mx-auto lg:max-w-none">
+            <div class="">
                 <iframe
                     class="block w-full"
                     src="https://docs.google.com/forms/d/e/1FAIpQLSda3r6fYBfg8LAnme6Mt5-Mmy-r3VDXRdzn6INUfRzc0Vo3Qw/viewform?embedded=true"

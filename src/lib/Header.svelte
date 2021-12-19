@@ -48,6 +48,25 @@
                         </div>
 
                         <Socials />
+                        <div class="flex justify-between items-center">
+                            <div
+                                class="fb-like w-full h-full py-2 rounded-lg font-bold"
+                                data-href="https://anselmelly.com"
+                                data-width="450"
+                                data-layout="button_count"
+                                data-action="like"
+                                data-size="large"
+                                data-share="true"
+                            />
+                            <a
+                                class="twitter-follow-button"
+                                data-size="large"
+                                href="https://twitter.com/ansymelly"
+                            >
+                                Follow @ansymelly</a
+                            >
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
