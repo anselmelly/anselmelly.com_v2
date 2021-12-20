@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from "svelte";
+
     export let s_name = "clients";
     import { scrollRef } from "svelte-scrolling";
     let clients = [
@@ -52,6 +54,12 @@
             bg: "bg-black",
         },
     ];
+    onMount(async () => {
+        clients.forEach(async (client, k) => {
+            let logo = 'media/clients/' + client.logo;
+            clients[k].ilogo = logo;
+        });
+    });
 </script>
 
 <section class="p-12 m-24 bg-white  mx-auto" use:scrollRef={s_name} id={s_name}>
@@ -60,14 +68,12 @@
             {#each clients as client}
                 <div
                     class="flex items-center border-2 {client.bg} rounded justify-center col-span-1 md:col-span-2 lg:col-span-1"
-                
                 >
-                {#await import("../assets/media/clients/"+client.logo) then image}
-                    
-                <img class=" h-32 w-3/4 object-contain" src="{image.default}" alt="{client.name}"/>
-                    
-                {/await}
-                   
+                    <img
+                        class=" object-contain"
+                        src={client.ilogo}
+                        alt={client.name}
+                    />
                 </div>
             {/each}
         </div>

@@ -79,7 +79,7 @@
         <h2 class="text-6xl font-bold mb-12">Showcase</h2>
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {#each showcase as s}
-                <a href={s.url} target="_blank" class="border-2 rounded-xl shadow-lg border-green-500 p-6 hover:bg-gray-100 inline-block">
+                <a href={s.url} target="_blank" class="border-2 rounded-xl shadow-lg shadow-indigo-300 border-indogo-100 p-6 hover:bg-indigo-50 inline-block">
                     <div
                         
                     >

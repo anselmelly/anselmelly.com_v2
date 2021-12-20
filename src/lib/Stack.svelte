@@ -1,67 +1,57 @@
 <script>
     export let s_name = "stack";
     import {scrollRef} from 'svelte-scrolling'
-    import laravel from "../assets/media/stack/laravel.png";
-    import wordpress from "../assets/media/stack/wordpress.png";
-    import symfony from "../assets/media/stack/symfony.png";
-    import svelte from "../assets/media/stack/svelte.png";
-    import linux from "../assets/media/stack/linux.png";
-    import tailwind from "../assets/media/stack/tailwind.png";
-    import nodejs from "../assets/media/stack/nodejs.png";
-    import netbeans from "../assets/media/stack/netbeans_ide.jpg";
-    import github from "../assets/media/stack/github.png";
-    import digitalOcean from "../assets/media/stack/digital_ocean.png";
 
     let stack = [
         {
             name: "laravel",
-            logo: laravel,
+            logo: 'laravel.png',
             link: "https://laravel.com/",
         },
 
         {
             name: "wordpress",
-            logo: wordpress,
+            logo: 'wordpress.png',
             link: "https://wordpress.org/",
         },
         {
             name: "symfony",
-            logo: symfony,
+            logo: 'symfony.png',
             link: "https://symfony.com/",
         },
         {
             name: "svelte",
-            logo: svelte,
+            logo: 'svelte.png',
             link: "https://svelte.dev/",
         },
         {
             name: "linux (Kali)",
-            logo: linux,
+            logo: 'linux.png',
             link: "https://www.kali.org/",
         },
         {
             name: "tailwindcss",
-            logo: tailwind,
+            logo: 'tailwind.png',
             link: "https://tailwindcss.com/",
         },
         {
             name: "nodejs",
-            logo: nodejs,
+            logo: 'nodejs.png',
             link: "https://nodejs.org/en/",
         },
         {
             name: "netbeans",
-            logo: netbeans,
+            logo: 'netbeans_ide.jpg',
             link: "https://netbeans.apache.org/",
         },
         {
             name: "github",
-            logo: github,
+            logo: 'github.png',
             link: "https://github.com/anselmelly",
         },
         {
             name: "digital_ocean",
-            logo: digitalOcean,
+            logo: 'digital_ocean.png',
             link: "https://www.digitalocean.com/?refcode=5fa150a1d644&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge",
         },
     ];
@@ -73,12 +63,12 @@
         <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
             {#each stack as s}
                 <div
-                    class="col-span-1 flex border-2 border-green-500 p-4 rounded-2xl justify-center md:col-span-2 lg:col-span-1"
+                    class="col-span-1 flex border-2 border-indigo-100 shadow-lg shadow-indigo-300 p-4 rounded-2xl justify-center md:col-span-2 lg:col-span-1"
                 >
                     <a href={s.link} target="_blank">
                         <img
-                            class="h-32 w-3/4 object-contain"
-                            src={s.logo}
+                            class=" w-full object-contain"
+                            src='/media/stack/{s.logo}'
                             alt={s.name}
                         />
                     </a>
