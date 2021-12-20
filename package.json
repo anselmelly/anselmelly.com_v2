@@ -1,6 +1,6 @@
 {
   "name": "anselmelly.com",
-  "version": "2.0",
+  "version": "v16.13.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
